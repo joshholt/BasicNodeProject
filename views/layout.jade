@@ -1,0 +1,38 @@
+!!!
+html
+  head
+    title= title
+    //if lt IE 9
+      script(src="http://html5shim.googlecode.com/svn/trunk/html5.js")
+    != css('bootstrap')
+    != css('app')
+    != css('bootstrap-responsive')
+    //fav and touch icons
+    link(rel="shortcut icon", href="images/favicon.ico")
+    link(rel="apple-touch-icon", href="images/apple-touch-icon.png")
+    link(rel="apple-touch-icon", sizes="72x72", href="images/apple-touch-icon-72x72.png")
+    link(rel="apple-touch-icon", sizes="114x114", href="images/apple-touch-icon-114x114.png")
+    
+  body
+    .navbar(class="navbar-fixed-top")
+      .navbar-inner
+        .container
+          a(class="btn btn-navbar", data-toggle="collapse", data-target=".nav-collapse")
+            span.icon-bar
+            span.icon-bar
+            span.icon-bar
+          a.brand(href="#") Express Coffee Talk
+          .nav-collapse
+            ul.nav
+              li.active
+                a(href="/timeline")
+                  i(class="icon-road icon-white")
+                  | Timeline
+              li 
+                a(href="/you")
+                  i(class="icon-user icon-white") 
+                  | Profile
+                  
+    .container
+      != body
+    != js('bootstrap.min')

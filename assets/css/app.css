@@ -1,0 +1,8 @@
+body { padding-top: 60px; }
+
+.thumbnail > img {
+	display: block;
+	max-width: 100%;
+	margin-left: 0;
+	margin-right: 7px;
+}

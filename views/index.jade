@@ -1,0 +1,10 @@
+h1= title
+ul.thumbnails
+  each tweet in tweets
+    li.span12
+      .thumbnail
+        if tweet.user
+          img(src="#{tweet.user.profile_image_url}")
+        p #{tweet.text}
+        if tweet.user
+          small #{tweet.user.name}
