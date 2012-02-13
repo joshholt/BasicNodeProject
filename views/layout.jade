@@ -7,18 +7,19 @@ html
     != css('bootstrap')
     != css('app')
     != css('bootstrap-responsive')
+    
     //fav and touch icons
     link(rel="shortcut icon", href="images/favicon.ico")
     link(rel="apple-touch-icon", href="images/apple-touch-icon.png")
     link(rel="apple-touch-icon", sizes="72x72", href="images/apple-touch-icon-72x72.png")
     link(rel="apple-touch-icon", sizes="114x114", href="images/apple-touch-icon-114x114.png")
-    
+
+    script(src="/auth/client")
   body
     .navbar(class="navbar-fixed-top")
       .navbar-inner
         .container
           a(class="btn btn-navbar", data-toggle="collapse", data-target=".nav-collapse")
-            span.icon-bar
             span.icon-bar
             span.icon-bar
           a.brand(href="#") Express Coffee Talk
@@ -32,7 +33,12 @@ html
                 a(href="/you")
                   i(class="icon-user icon-white") 
                   | Profile
+              li
+                button.login Login
                   
     .container
       != body
+    script(src="http://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js")
+    != js('handlebars')
     != js('bootstrap.min')
+    != js('app')

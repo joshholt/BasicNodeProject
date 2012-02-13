@@ -1,5 +1,5 @@
 {
-    "name": "application-name"
+    "name": "Express-Coffee-Talk"
   , "version": "0.0.1"
   , "private": true
   , "dependencies": {
@@ -12,7 +12,7 @@
     , "markdown": "*"
     , "stepc": "*"
     , "request": "*"
-    , "express-twitter": "*"
+    , "easy-oauth": "*"
   }
   , "engine": "node ~> 0.6.7"
 }

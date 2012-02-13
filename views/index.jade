@@ -1,10 +1,22 @@
-h1= title
-ul.thumbnails
-  each tweet in tweets
-    li.span12
-      .thumbnail
-        if tweet.user
-          img(src="#{tweet.user.profile_image_url}")
-        p #{tweet.text}
-        if tweet.user
-          small #{tweet.user.name}
+h1.banner Login
+.details
+
+script(id="test-template", type="text/template").
+  <ul class="thumbnails">
+    {{#tweets}}
+      <li class="span12">
+        <div class="thumbnail">
+          {{#retweeted_status}}          
+            <img src="{{user.profile_image_url}}"/>
+            <p>{{text}}</p>
+            <small>{{user.name}} -- retweeted by: {{../user.name}} <img height="16px" width="16px" src="{{../user.profile_image_url}}"/></small>
+          {{/retweeted_status}}
+          {{^retweeted_status}}
+            <img src="{{user.profile_image_url}}"/>
+            <p>{{text}}</p>
+            <small>{{user.name}}</small>
+          {{/retweeted_status}}
+        </div>
+      </li>
+    {{/tweets}}
+  </ul>
