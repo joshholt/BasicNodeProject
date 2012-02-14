@@ -42,3 +42,6 @@ html
     != js('handlebars')
     != js('bootstrap.min')
     != js('app')
+    if isAuthenticated
+      script(id="remove-me", type="text/javascript").
+        window.a = true;

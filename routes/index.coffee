@@ -7,8 +7,7 @@ twtr = require('../lib/twitter-js')(tkey, tsec)
 module.exports =
   index:  (req, res, next) ->
     req.authenticate ['oauth'], (err, authenticated) ->
-      console.log err
-      res.render 'index', {title: "Express Coffee Talk"}
+      res.render 'index', {title: "Express Coffee Talk", isAuthenticated: authenticated}
   timeline: (req, res) ->
     auth = req.getAuthDetails()
 
